@@ -1,0 +1,19 @@
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: koorung
+    password: test1234
+    url: jdbc:postgresql://localhost:5432/demo
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: create
+    open-in-view: false   # osiv설정 :: 끄면 뷰영역까지 영속성컨텍스트가 유지되지 않음 (기본값: true)
+
+logging:
+  level:
+    org.hibernate.type.descriptor.sql: trace
