@@ -16,7 +16,7 @@ class UserController(private val userService: UserService) {
     }
 
     @GetMapping("/{id}")
-    fun findUser(@PathVariable id: UUID): UserResponse {
+    fun findUser(@PathVariable id: Long): UserResponse {
         val user = userService.findUser(id)
         return UserResponse(user.name, user.age)
     }
